@@ -32,9 +32,14 @@ header {
 
 h1 {
   font-weight: bold;
-  margin.bottom: 25px;
-  font.size:  75px;
+  margin-bottom: 25px;
+  font-size:  75px;
 }
-
+button {
+  border:none;
+  padding: 10px;
+  width:50px;
+  height:
+}
 </style>
 
