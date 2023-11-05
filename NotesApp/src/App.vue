@@ -39,7 +39,11 @@ button {
   border:none;
   padding: 10px;
   width:50px;
-  height:
+  cursor:pointer;
+  background-color:rgb(21,20,20);
+  border-radius: 100%;
+  color:white;
+  font-size:20px;
 }
 </style>
 
