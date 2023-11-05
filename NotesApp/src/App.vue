@@ -5,7 +5,7 @@
         <h1>Notes</h1>
         <button>+</button>
         <div class="card-container">
-          <card>
+          <card class="card"> 
             <p class="main-text"></p>
             <p class="date"></p>
           </card>
