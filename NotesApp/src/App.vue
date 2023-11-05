@@ -10,6 +10,10 @@
             <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem soluta, possimus numquam aspernatur voluptatem cum.</p>
             <p class="date">04/27/6853</p>
           </card>
+          <card class="card"> 
+            <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem soluta, possimus numquam aspernatur voluptatem cum.</p>
+            <p class="date">04/27/6853</p>
+          </card>
         </div>
     </div>
   </main>
@@ -65,5 +69,11 @@ card {
   justify-content:space-between;
   margin-right: 20px;
   margin-bottom:20px;
+}
+
+.card-container {
+  display:flex;
+  flex-wrap:wrap;
+
 }
 </style>
