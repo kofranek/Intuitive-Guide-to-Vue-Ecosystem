@@ -4,13 +4,13 @@
       <header>
         <h1>Notes</h1>
         <button>+</button>
+      </header>
         <div class="card-container">
           <card class="card"> 
-            <p class="main-text"></p>
-            <p class="date"></p>
+            <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem soluta, possimus numquam aspernatur voluptatem cum.</p>
+            <p class="date">04/27/6853</p>
           </card>
         </div>
-      </header>
     </div>
   </main>
 </template>
@@ -19,11 +19,12 @@
 main {
   height: 100vh;
   width: 100vw;
+  /* background-color: aqua; */
 }
 .container {
   max-width: 1000px;
   padding: 10px;
-  margin: 0, auto;
+  margin: 0, auto; /* nahoře, dole: 0, vpravo,vlevo:position: ; stejně*/
 }
 
 header {
@@ -46,5 +47,23 @@ button {
   border-radius: 100%;
   color: white;
   font-size: 20px;
+}
+
+.date{
+  font-size:12.5px;
+  font-weight:bold;
+}
+
+card {
+  width:225px;
+  height:225px;
+  background-color:rgb(237,182,44);
+  padding: 10px;
+  border-radius:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  margin-right: 20px;
+  margin-bottom:20px;
 }
 </style>
