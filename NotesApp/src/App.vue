@@ -5,8 +5,10 @@
         <h1>Notes</h1>
         <button>+</button>
         <div class="card-container">
-          <p class="main-text"></p>
-          <p class="date"></p>
+          <card>
+            <p class="main-text"></p>
+            <p class="date"></p>
+          </card>
         </div>
       </header>
     </div>
@@ -21,29 +23,28 @@ main {
 .container {
   max-width: 1000px;
   padding: 10px;
-  margin: 0,auto;
+  margin: 0, auto;
 }
 
 header {
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 }
 
 h1 {
   font-weight: bold;
   margin-bottom: 25px;
-  font-size:  75px;
+  font-size: 75px;
 }
 button {
-  border:none;
+  border: none;
   padding: 10px;
-  width:50px;
-  cursor:pointer;
-  background-color:rgb(21,20,20);
+  width: 50px;
+  cursor: pointer;
+  background-color: rgb(21, 20, 20);
   border-radius: 100%;
-  color:white;
-  font-size:20px;
+  color: white;
+  font-size: 20px;
 }
 </style>
-
