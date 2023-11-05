@@ -5,6 +5,7 @@
         <textarea name="note" id="note" cols="30" rows="10">
         </textarea>
         <button>Add Note</button> 
+        <button class="close">Close</button>
       </div>
     </div>
     <div class="container">
@@ -108,6 +109,22 @@ header button {
   position:relative;
   display:flex;
   flex-direction:column;
+}
+
+.modal button {
+  padding: 10px 20px;
+  font-size:20px;
+  width: 100%;
+  background-color: blueviolet;
+  border:none;
+  color:white;
+  cursor:pointer;
+  margin-top:15px;
+}
+
+.modal .close {
+  background-color: red;
+  margin-top: 7px;
 }
 
 </style>
