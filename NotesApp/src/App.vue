@@ -23,10 +23,18 @@ main {
   padding: 10px;
   margin: 0,auto;
 }
-</style>
 
 header {
   display:flex;
   justify-content: space-between;
   align-items:center;
 }
+
+h1 {
+  font-weight: bold;
+  margin.bottom: 25px;
+  font.size:  75px;
+}
+
+</style>
+
