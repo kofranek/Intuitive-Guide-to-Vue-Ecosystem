@@ -18,7 +18,7 @@ const addNote = () => {
     backgroundColor: getRandomColor()
   })
   showModal.value = false
-  newMote.value=""
+  newNote.value=""
 
 
 }
