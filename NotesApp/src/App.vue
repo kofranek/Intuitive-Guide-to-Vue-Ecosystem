@@ -2,6 +2,7 @@
 import { ref } from "vue"
 
 const showModal = ref(false)
+const newNote=ref("Nazdar světe")
 
 
 </script>
@@ -10,7 +11,8 @@ const showModal = ref(false)
   <main>
     <div v-show="showModal" class="overlay">
       <div class="modal">
-        <textarea name="note" id="note" cols="30" rows="10">
+        {{ newNote }}
+        <textarea v-model="newNote" name="note" id="note" cols="30" rows="10">
         </textarea>
         <button>Add Note</button> 
         <button @click="showModal=false" class="close">Close</button>
