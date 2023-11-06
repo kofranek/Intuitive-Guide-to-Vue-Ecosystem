@@ -4,6 +4,7 @@ import { ref } from "vue"
 const showModal = ref(false)
 const newNote = ref("")
 const notes = ref([])
+const errorMessage = ref("")
 
 function getRandomColor() {
   let color = "hsl(" + Math.random() * 360 + ", 100%, 75%)"
@@ -11,7 +12,10 @@ function getRandomColor() {
 }
 
 const addNote = () => {
-  if (newNote.value.length < 10) { return }
+  if (newNote.value.length < 10) {
+    errorMessage.value="Zpráva mít nejméně 10 znaků"
+    return }
+    errorMessage.value=""
   notes.value.push({
     id: Math.floor(Math.random() * 1000000),
     text: newNote.value,
@@ -29,6 +33,7 @@ const addNote = () => {
       <div class="modal">
         <textarea v-model="newNote" name="note" id="note" cols="30" rows="10">
         </textarea>
+        <p v-if="errorMessage">{{errorMessage}}</p>
         <button @click="addNote()">Add Note</button>
         <button @click="showModal = false" class="close">Close</button>
       </div>
@@ -146,5 +151,9 @@ header button {
 .modal .close {
   background-color: rgb(193, 15, 15);
   margin-top: 7px;
+}
+
+.modal p {
+  color: rgb(193, 15, 15);
 }
 </style>
