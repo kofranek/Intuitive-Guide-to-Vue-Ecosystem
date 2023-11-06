@@ -19,7 +19,6 @@ const addNote = () => {
   })
   showModal.value = false
   newNote.value = ""
-
 }
 </script>
 
@@ -43,7 +42,7 @@ const addNote = () => {
           <p class="main-text">
             {{ note.text }}
           </p>
-          <p class="date">{{ note.date }}</p>
+          <p class="date">{{ note.date.toLocaleDateString("cz") }}</p>
         </div>
       </div>
     </div>
