@@ -38,7 +38,10 @@ const addNote = () => {
         <button @click="showModal = true">+</button>
       </header>
       <div class="card-container">
-        <div v-for="note in notes" class="card">
+        <div v-for="note in notes" 
+        class="card"
+        :style="{backgroundColor:note.backgroundColor}"
+        >
           <p class="main-text">
             {{ note.text }}
           </p>
