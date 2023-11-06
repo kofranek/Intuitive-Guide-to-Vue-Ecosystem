@@ -2,9 +2,26 @@
 import { ref } from "vue"
 
 const showModal = ref(false)
-const newNote=ref("Nazdar světe")
+const newNote = ref("")
+const notes = ref([])
+
+function getRandomColor() {
+  let color = "hsl(" + Math.random() * 360 + ", 100%, 75%)"
+  return color
+}
+
+const addNote = () => {
+  notes.value.push({
+    id: Math.floor(Math.random() * 1000000),
+    text: newNote.value,
+    date: new Date(),
+    backgroundColor: getRandomColor()
+  })
+  showModal.value = false
+  newMote.value=""
 
 
+}
 </script>
 
 <template>
@@ -14,14 +31,15 @@ const newNote=ref("Nazdar světe")
         {{ newNote }}
         <textarea v-model="newNote" name="note" id="note" cols="30" rows="10">
         </textarea>
-        <button>Add Note</button> 
-        <button @click="showModal=false" class="close">Close</button>
+        <button @click="addNote()">Add Note</button>
+        <button @click="showModal = false" class="close">Close</button>
       </div>
     </div>
     <div class="container">
       <header>
+        {{ notes }}
         <h1>Notes</h1>
-        <button @click="showModal=true">+</button>
+        <button @click="showModal = true">+</button>
       </header>
       <div class="card-container">
         <div class="card">
@@ -49,10 +67,12 @@ main {
   width: 100vw;
   /* background-color: aqua; */
 }
+
 .container {
   max-width: 1000px;
   padding: 10px;
-  margin: 0 auto; /* nahoře, dole: 0, vpravo,vlevo:position: ; stejně*/
+  margin: 0 auto;
+  /* nahoře, dole: 0, vpravo,vlevo:position: ; stejně*/
 }
 
 header {
