@@ -8,7 +8,7 @@ const showModal = ref(false)
 
 <template>
   <main>
-    <div v-if="showModal" class="overlay">
+    <div v-show="showModal" class="overlay">
       <div class="modal">
         <textarea name="note" id="note" cols="30" rows="10">
         </textarea>
