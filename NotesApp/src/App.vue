@@ -39,8 +39,9 @@ const addNote = () => {
       </header>
       <div class="card-container">
         <div v-for="note in notes" 
-        class="card"
-        :style="{backgroundColor:note.backgroundColor}"
+          :key="note.id" 
+          class="card" 
+          :style="{ backgroundColor: note.backgroundColor }"
         >
           <p class="main-text">
             {{ note.text }}
