@@ -18,8 +18,7 @@ const addNote = () => {
     backgroundColor: getRandomColor()
   })
   showModal.value = false
-  newNote.value=""
-
+  newNote.value = ""
 
 }
 </script>
@@ -28,7 +27,6 @@ const addNote = () => {
   <main>
     <div v-show="showModal" class="overlay">
       <div class="modal">
-        {{ newNote }}
         <textarea v-model="newNote" name="note" id="note" cols="30" rows="10">
         </textarea>
         <button @click="addNote()">Add Note</button>
@@ -37,24 +35,15 @@ const addNote = () => {
     </div>
     <div class="container">
       <header>
-        {{ notes }}
         <h1>Notes</h1>
         <button @click="showModal = true">+</button>
       </header>
       <div class="card-container">
-        <div class="card">
+        <div v-for="note in notes" class="card">
           <p class="main-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-            soluta, possimus numquam aspernatur voluptatem cum.
+            {{ note.text }}
           </p>
-          <p class="date">04/27/6853</p>
-        </div>
-        <div class="card">
-          <p class="main-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-            soluta, possimus numquam aspernatur voluptatem cum.
-          </p>
-          <p class="date">04/27/6853</p>
+          <p class="date">{{ note.date }}</p>
         </div>
       </div>
     </div>
