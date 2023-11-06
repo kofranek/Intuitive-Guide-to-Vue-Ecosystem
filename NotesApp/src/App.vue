@@ -11,6 +11,7 @@ function getRandomColor() {
 }
 
 const addNote = () => {
+  if (newNote.value.length < 10) { return }
   notes.value.push({
     id: Math.floor(Math.random() * 1000000),
     text: newNote.value,
@@ -38,11 +39,7 @@ const addNote = () => {
         <button @click="showModal = true">+</button>
       </header>
       <div class="card-container">
-        <div v-for="note in notes" 
-          :key="note.id" 
-          class="card" 
-          :style="{ backgroundColor: note.backgroundColor }"
-        >
+        <div v-for="note in notes" :key="note.id" class="card" :style="{ backgroundColor: note.backgroundColor }">
           <p class="main-text">
             {{ note.text }}
           </p>
